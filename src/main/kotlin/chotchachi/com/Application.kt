@@ -24,6 +24,10 @@ fun Application.module(testing: Boolean = false, koinModules: List<Module> = lis
         get("/") {
             call.respond("quang handsome")
         }
+
+        get("/test") {
+            call.respond("test")
+        }
     }
 
     val jobSchedulerManager by inject<JobSchedulerManager>()
