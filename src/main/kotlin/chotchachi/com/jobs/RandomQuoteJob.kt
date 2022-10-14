@@ -10,4 +10,9 @@ class RandomQuoteJob(
     override fun execute(context: JobExecutionContext?) {
 
     }
+
+    companion object {
+        const val JOB_MAP_NAME_ID_KEY = "name"
+        const val WATCH_JOB_GROUP = "WatchJob"
+    }
 }
