@@ -5,8 +5,6 @@ import chotchachi.com.jobs.JobFactory
 import chotchachi.com.jobs.JobSchedulerManager
 import chotchachi.com.jobs.RandomQuoteJob
 import io.ktor.server.application.*
-import io.ktor.server.response.*
-import io.ktor.server.routing.*
 import org.koin.core.module.Module
 import org.koin.ktor.ext.inject
 import org.koin.ktor.plugin.Koin
@@ -18,16 +16,6 @@ fun main(args: Array<String>): Unit =
 fun Application.module(testing: Boolean = false, koinModules: List<Module> = listOf(appModule)) {
     install(Koin) {
         modules(koinModules)
-    }
-
-    routing {
-        get("/") {
-            call.respond("quang handsome")
-        }
-
-        get("/test") {
-            call.respond("test")
-        }
     }
 
     val jobSchedulerManager by inject<JobSchedulerManager>()

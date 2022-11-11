@@ -5,10 +5,10 @@ import org.quartz.Job
 import org.quartz.JobExecutionContext
 
 class RandomQuoteJob(
-    quoteRepository: QuoteRepository
+    val quoteRepository: QuoteRepository
 ) : Job {
     override fun execute(context: JobExecutionContext?) {
-
+        print("test print")
     }
 
     companion object {
