@@ -66,7 +66,7 @@ private fun startCountdownJob(jobSchedulerManager: JobSchedulerManager) {
         .withIdentity(jobId)
         .build()
 
-    val cronSchedule = CronScheduleBuilder.cronSchedule("0 0 10 * * ?")
+    val cronSchedule = CronScheduleBuilder.cronSchedule("0 15 10 ? * *")
 
     val trigger = TriggerBuilder.newTrigger()
         .withIdentity("triggerForCountdownJob")

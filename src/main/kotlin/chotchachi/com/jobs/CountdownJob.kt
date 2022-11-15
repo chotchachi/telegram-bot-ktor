@@ -40,7 +40,7 @@ class CountdownJob : Job, KoinComponent {
 Còn $noelDaysDiff ngày nữa là Noel.
 Còn $newYearDaysDiff ngày nữa là Tết Dương.
 Còn $tetDaysDiff ngày nữa là Tết Âm.
-                """
+                """.trimIndent()
                 )
             }
         }
